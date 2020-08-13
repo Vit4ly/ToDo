@@ -1,0 +1,122 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    width: 1440px;
+    margin: 0 auto;
+
+}
+
+.header {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding-left: 100px;
+    text-align: center;
+
+    background-color: aqua;
+}
+
+.inp {
+    grid-column: span 3;
+    font-size: 19px;
+}
+/*.inp:focus {*/
+/*    background-color: ;*/
+/*}*/
+
+.addBtn {
+    grid-column: span 1;
+    background: #d9d9d9;
+    color: #555;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border-radius: 5px;
+
+}
+
+.addBtn:hover {
+    background-color: #bbb;
+}
+
+
+
+.toDo {
+    grid-column: span 12;
+}
+
+
+.myUl {
+
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    border: 1px solid aqua;
+    font-size: 18px;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+ul li:hover {
+    background: #ddd;
+}
+
+ul li.checked {
+    background: #888888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+    background-color: #f44336;
+    color: white;
+}
